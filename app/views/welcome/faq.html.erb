@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Oval Ski Club | FAQ</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+
+    <!--custom css and bootstrap files are imported below -->
+    <link href="../assets/bootstrap.css" rel="stylesheet">
+    <link href="../assets/mycustomcss.css" rel="stylesheet">
+    <style type="text/css">
+      body
+      {
+      padding-top: 60px;
+      padding-bottom: 40px;
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+    <!-- Image Banner -->
+    <center>
+    <img src="../assets/headerImage8.jpg" width="940" height="180" title="A picture from our club holiday in 2007"/>
+    <div class="container">
+    </center>
+    </div>
+    <div class="container">
+    <hr>
+<!-- Frequently asked questions coded using div class containers, hero-units and accordions -->
+      <div class="container">
+        <div class="hero-unit">
+          <center>
+          <h2>Frequently Asked Questions</h2>
+          <p>Below are some of the common questions we have been asked by members and non-members. If you have a question for us and it is not listed below, then please get in touch. (see our <a href="contact"> contact</a> page for more information).</p>
+
+          <div class="accordion" id="accordion">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSupportOne">Where are you located?</a>
+              </div>
+              <div id="collapseSupportOne" class="accordion-body collapse">
+                <div class="accordion-inner">We are based at the Oval Sports Centre in Bebington. Visit our<a href="contact"> contact</a> page for more details on how to get there.</div>
+              </div>
+            </div>
+
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSupportTwo">When are you open?</a>
+              </div>
+              <div id="collapseSupportTwo" class="accordion-body collapse">
+                <div class="accordion-inner">From September – June (May for the adults). For juniors on a Saturday morning between 10.00am and 1.00pm (10.00am for 5+ to under 11’s and 11.30am for 11+). For adults on a Sunday evening 5.00pm – 8.00pm. See our <a href="sessions"> sessions</a> page for more details.</div>
+              </div>
+            </div>
+            
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSupportThree">How much does it cost to ski?</a>
+              </div>
+            <div id="collapseSupportThree" class="accordion-body collapse">
+              <div class="accordion-inner">The cost is £5.00 per session. However, if you use your own skiing equipment, we offer a discounted price of £2.00. An annual membership is also required in order to ski and you can join the first time you ski at the club – see our <a href="sessions"> sessions</a> page for more details.</div>
+            </div>
+          </div> 
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSupportFour">Do you provide skis and boots for hire??</a>
+            </div>
+          <div id="collapseSupportFour" class="accordion-body collapse">
+            <div class="accordion-inner">Yes, we have a full range of carver skis and boots for use, which is included in the price.</div>
+          </div>
+        </div> 
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSupportFive">Can I ski with my kids?</a>
+            </div>
+          <div id="collapseSupportFive" class="accordion-body collapse">
+            <div class="accordion-inner">We provide family ski sessions, about once a month during the Sunday evening session. All skiers must be able to turn and stop safely in order to ski during these sessions. The dates are advertised in the ski hut on the notice board. However, there will be no instruction during these sessions.</div>
+          </div>
+        </div>    
+      </center> 
+
+      <hr>
+      <footer>
+      <!-- Links to Facebook and Twitter -->
+      <center>&copy; Oval Ski Club 2012 &nbsp</center>
+      <a href="http://www.facebook.com/group.php?gid=2256597544"><img src="../assets/facebooklogo.png" width="55" height="25" title="Like us on Facebook"><a href="https://twitter.com/OvalSki"><img src="../assets/twitter.png" width="55" height="25" title="Follow us on Twitter"></a></a>
+      </footer>
+    </div>
+
+      <%= yield %>
+
+    <script text/javascript src="../assets/jquery-1.8.2.min.js"></script>
+<script text/javascript src="../assets/bootstrap.min.js"></script>
+<script text/javascript src="assets/js/jquery-1.8.2.min.js"></script>
+<script text/javascript src="assets/js/bootstrap.min.js"></script>
+<script>
+$(function(){
+$('.dropdown-toggle').dropdown();
+$('.dropdown input, .dropdown label').click(function (e) {
+e.stopPropagation();
+});
+});
+</script>
+
+
+<%=yield%>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<%= form_for @event, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :title, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :title, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :body, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :body, :class => 'text_area' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                events_path, :class => 'btn' %>
+  </div>
+<% end %>
+
+<script text/javascript src="assets/js/jquery-1.8.2.min.js"></script>
+    <script text/javascript src="assets/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+
+
+<script text/javascript src="../assets/jquery-1.8.2.min.js"></script>
+<script text/javascript src="../assets/bootstrap.min.js"></script>
+<script text/javascript src="assets/js/jquery-1.8.2.min.js"></script>
+<script text/javascript src="assets/js/bootstrap.min.js"></script>
+<script>
+$(function(){
+$('.dropdown-toggle').dropdown();
+$('.dropdown input, .dropdown label').click(function (e) {
+e.stopPropagation();
+});
+});
+</script>

@@ -1,0 +1,27 @@
+<%- model_class = Announcement -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => t('helpers.titles.edit', :model => model_class.model_name.human,
+                                   :default => "Edit #{model_class.model_name.human}") %></h1>
+</div>
+<%= render :partial => 'form' %>
+
+<script text/javascript src="assets/js/jquery-1.8.2.min.js"></script>
+<script text/javascript src="assets/js/bootstrap.min.js"></script>
+
+
+  </body>
+</html>
+
+
+<script text/javascript src="../assets/jquery-1.8.2.min.js"></script>
+<script text/javascript src="../assets/bootstrap.min.js"></script>
+<script text/javascript src="assets/js/jquery-1.8.2.min.js"></script>
+<script text/javascript src="assets/js/bootstrap.min.js"></script>
+<script>
+$(function(){
+$('.dropdown-toggle').dropdown();
+$('.dropdown input, .dropdown label').click(function (e) {
+e.stopPropagation();
+});
+});
+</script>
